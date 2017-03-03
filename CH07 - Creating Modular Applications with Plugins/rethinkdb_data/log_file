@@ -1,0 +1,18 @@
+2017-03-03T06:46:32.044002025 0.133002s notice: Recursively removing directory /home/xuan/Project/pyco/hapi_in_action_code_sample/hapi.js-in-action/CH07 - Creating Modular Applications with Plugins/rethinkdb_data/tmp
+2017-03-03T06:46:32.066592119 0.155590s notice: Initializing directory /home/xuan/Project/pyco/hapi_in_action_code_sample/hapi.js-in-action/CH07 - Creating Modular Applications with Plugins/rethinkdb_data
+2017-03-03T06:46:32.066813647 0.155811s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/home/xuan/Project/pyco/hapi_in_action_code_sample/hapi.js-in-action/CH07 - Creating Modular Applications with Plugins/rethinkdb_data' did not already exist or is empty.)
+2017-03-03T06:46:32.066885665 0.155883s notice: Running rethinkdb 2.3.5~0wily (GCC 5.2.1)...
+2017-03-03T06:46:32.073054730 0.162057s notice: Running on Linux 4.2.0-34-generic x86_64
+2017-03-03T06:46:32.073256363 0.162254s notice: Loading data from directory /home/xuan/Project/pyco/hapi_in_action_code_sample/hapi.js-in-action/CH07 - Creating Modular Applications with Plugins/rethinkdb_data
+2017-03-03T06:46:32.297297812 0.386295s info: Automatically using cache size of 2761 MB
+2017-03-03T06:46:32.298613597 0.387611s notice: Listening for intracluster connections on port 29015
+2017-03-03T06:46:32.302127985 0.391125s notice: Listening for client driver connections on port 28015
+2017-03-03T06:46:32.302498788 0.391496s notice: Listening for administrative HTTP connections on port 8080
+2017-03-03T06:46:32.302505852 0.391502s notice: Listening on cluster addresses: 127.0.0.1, 127.0.1.1, ::1
+2017-03-03T06:46:32.302514983 0.391512s notice: Listening on driver addresses: 127.0.0.1, 127.0.1.1, ::1
+2017-03-03T06:46:32.302520341 0.391517s notice: Listening on http addresses: 127.0.0.1, 127.0.1.1, ::1
+2017-03-03T06:46:32.302529676 0.391526s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-03-03T06:46:32.302538863 0.391535s notice: Server ready, "xuan_PC_0yw" 1213db19-696c-44fd-b03b-55d3638adcc9
+2017-03-03T06:46:36.278279758 4.367278s info: Table fa5ebd06-0cda-47b1-880a-64034447f638: Added replica on this server.
+2017-03-03T06:46:36.278430312 4.367428s info: Table fa5ebd06-0cda-47b1-880a-64034447f638: Starting a new Raft election for term 1.
+2017-03-03T06:46:36.318359278 4.407357s info: Table fa5ebd06-0cda-47b1-880a-64034447f638: This server is Raft leader for term 1. Latest log index is 0.
