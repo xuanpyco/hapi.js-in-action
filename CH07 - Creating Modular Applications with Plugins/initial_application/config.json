@@ -1,0 +1,33 @@
+{
+	"server" : {
+		"debug":{
+			"request": ["error"],
+			"log": ["error"]
+		}
+	},
+	"connections" : [
+		{
+			"port": 4000
+		}
+	],
+	"registrations" : [
+		{
+			"plugin" : {
+				"register": "./plugins/database",
+				"options" : {
+					"dbName": "pingoo",
+					"dbTable": "pings"
+				}
+			}
+		},
+		{
+			"plugin": "./plugins/portal"
+		},
+		{
+			"plugin": "./plugins/receive"
+		},
+		{
+			"plugin": "vision"
+		}
+	]
+}

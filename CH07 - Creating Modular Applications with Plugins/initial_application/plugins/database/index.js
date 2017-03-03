@@ -4,14 +4,12 @@ const R = require('rethinkdb');
 
 module.exports.register = function (server, options, next) {
 
-    // Database
-
     server.method({
         name: 'database.getRecent',
         method: function (callback) {
 
             R
-            .table('pings')
+            .table(options.dbTable)
             .orderBy(R.desc('timestamp'))
             .run(server.app.db, (err, cursor) => {
 
@@ -29,7 +27,7 @@ module.exports.register = function (server, options, next) {
         method: function (code, callback) {
 
             R
-            .table('pings')
+            .table(options.dbTable)
             .filter({ code: code })
             .orderBy(R.desc('timestamp'))
             .run(server.app.db, (err, cursor) => {
@@ -48,7 +46,7 @@ module.exports.register = function (server, options, next) {
         method: function (payload, callback) {
 
             R
-            .table('pings')
+            .table(options.dbTable)
             .insert(payload)
             .run(server.app.db, (err) => {
 
@@ -61,5 +59,18 @@ module.exports.register = function (server, options, next) {
         }
     });
 
-    next();
+    R.connect({ db: options.dbName }, (err, conn) => {
+
+        if (err) {
+            throw err;
+        }
+
+        server.app.db = conn;
+
+        next();
+    });
+};
+
+module.exports.register.attributes = {
+    pkg: require('./package')
 }

@@ -1,5 +1,17 @@
-module.exports.register = function (server, options, next) {
-    // Portal
+const after = function (server, next) {
+    
+
+    server.views({
+        engines: {
+            hbs: require('handlebars')
+        },
+        relativeTo: __dirname,
+        helpersPath: 'templates/helpers',
+        partialsPath: 'templates/partials',
+        path: 'templates',
+        layout: true,
+        isCached: false
+    });
 
     server.route({
         method: 'GET',
@@ -40,6 +52,11 @@ module.exports.register = function (server, options, next) {
         }
     });
 
+    next();
+}
+
+module.exports.register = function (server, options, next) {
+    server.dependency(['pingoo-database','vision'], after);
     next();
 }
 

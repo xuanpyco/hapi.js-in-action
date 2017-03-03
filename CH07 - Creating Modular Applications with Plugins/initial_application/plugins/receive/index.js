@@ -28,6 +28,6 @@ module.exports.register = function (server, options, next) {
 };
 
 
-module.exports.attributes = {
+module.exports.register.attributes = {
     pkg: require ('./package')
 }
